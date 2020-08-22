@@ -14,6 +14,10 @@
  * Other info:
  * If at least one of the skill types is sealed/blocked, skill is also sealed/blocked.
  * 
+ * You can:
+ *  - use this plugin and its extentions in any projects; 
+ *  - edit/modify this plugin and its extentions.
+ * Credit is desirable, but isn't necessarily.
  */
 /*:ru
  * @target MV, MZ
@@ -27,6 +31,10 @@
  * Другая информация:
  * Если хотя бы один из типов навыка заблокирован, навык тоже будет заблокирован.
  * 
+ * Вы можете:
+ *  - использовать этот плагин и его расширения в любых проектах; 
+ *  - редактировать/улучшать этот плагин и его расширения.
+ * Указывать авторство желательно, но не обязательно.
 */
 /*:uk
  * @target MV, MZ
@@ -39,7 +47,11 @@
  *
  * Інша інформація
  * Якщо хоча б один з типів навички заблокований, навичка теж буде заблокована.
- * 
+ *
+ * Ви можете:
+ *  - використовувати цей плагін та його розширення у будь-яких проектах; 
+ *  - редагувати/покращувати цей плагін та його розширення.
+ * Вказувати авторство бажано, але не обов'язково.
 */
 
 WP_Stypes_Game_BattlerBase_meetsSkillConditions = Game_BattlerBase.prototype.meetsSkillConditions 
