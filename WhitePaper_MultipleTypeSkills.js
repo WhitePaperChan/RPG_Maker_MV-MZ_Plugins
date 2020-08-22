@@ -1,10 +1,10 @@
 //=============================================================================
-// WhitePaper_MultipleSkillTypes.js
+// WhitePaper_MultipleTypeSkills.js
 //=============================================================================
 
 /*:
  * @target MV, MZ
- * @plugindesc Allows to use multiple skill types (stypes).
+ * @plugindesc Allows to use multiple types (stypes) for one skill.
  * @author WhitePaper
  *
  * @help
@@ -17,7 +17,7 @@
  */
 /*:ru
  * @target MV, MZ
- * @plugindesc Даёт возможность использовать несколько типов навыка.
+ * @plugindesc Даёт возможность использовать несколько типов для одного навыка.
  * @author WhitePaper
  *
  * @help
@@ -30,7 +30,7 @@
 */
 /*:uk
  * @target MV, MZ
- * @plugindesc Надає можливість використовувати кілька типів навички.
+ * @plugindesc Надає можливість використовувати кілька типів для однієї навички.
  * @author WhitePaper
  *
  * @help
