@@ -79,14 +79,16 @@
 Вказувати авторство не обов'язково. 
 */
 
-WP_EnemyGauges_params = PluginManager.parameters('WhitePaper_EnemyGaugesMZ') || true;
-WP_EnemyGauges_showTime = eval(WP_EnemyGauges_params['ShowTime']) || true;
-WP_EnemyGauges_showHP = eval(WP_EnemyGauges_params['ShowHP']) || true;
-WP_EnemyGauges_showMP = eval(WP_EnemyGauges_params['ShowMP']) || true;
-WP_EnemyGauges_showTP = eval(WP_EnemyGauges_params['ShowTP']) || true;
-WP_EnemyGauges_offsetY = eval(WP_EnemyGauges_params['OffsetY']) || 0;
-WP_EnemyGauges_gaugeSpacing = eval(WP_EnemyGauges_params['GaugeSpacing']) || 24;
+//Plugin parameters
+WP_EnemyGauges_params = PluginManager.parameters('WhitePaper_EnemyGaugesMZ');
+WP_EnemyGauges_showTime = eval(WP_EnemyGauges_params['ShowTime']);
+WP_EnemyGauges_showHP = eval(WP_EnemyGauges_params['ShowHP']);
+WP_EnemyGauges_showMP = eval(WP_EnemyGauges_params['ShowMP']);
+WP_EnemyGauges_showTP = eval(WP_EnemyGauges_params['ShowTP']);
+WP_EnemyGauges_offsetY = eval(WP_EnemyGauges_params['OffsetY']);
+WP_EnemyGauges_gaugeSpacing = eval(WP_EnemyGauges_params['GaugeSpacing']);
 
+//Which gauges should be created
 WP_EnemyGauges_Sprite_Enemy_initialize = Sprite_Enemy.prototype.initialize;
 Sprite_Enemy.prototype.initialize = function(battler) {
     WP_EnemyGauges_Sprite_Enemy_initialize.call(this, battler);
@@ -105,12 +107,14 @@ Sprite_Enemy.prototype.initialize = function(battler) {
     }
 };
 
+//Init gauges in initMembers
 WP_EnemyGauges_Sprite_Enemy_initMembers = Sprite_Enemy.prototype.initMembers;
 Sprite_Enemy.prototype.initMembers = function() {
     WP_EnemyGauges_Sprite_Enemy_initMembers.call(this);
     this._gauges = [];
 };
 
+//Create gauges
 Sprite_Enemy.prototype.createGauge = function(type){
     var id = this._gauges.length;
     this._gauges.push(new Sprite_Gauge());
