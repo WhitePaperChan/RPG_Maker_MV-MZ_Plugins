@@ -5,6 +5,7 @@
 
 //=============================================================================
  /*:
+ * @target MV MZ
  * @plugindesc Allows using custom set of keybords for name input
  * @author WhitePaper
  *
