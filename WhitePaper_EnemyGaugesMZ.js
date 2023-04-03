@@ -1,6 +1,6 @@
 /*:
 @target MZ
-@plugindesc Додає полоси HP, MP, TP та дії противникам/противницям.
+@plugindesc Додає полоси HP, MP, TP та дії противни_цям.
 @author WhitePaper
 @url https://github.com/WhitePaperChan/RPG_Maker_MV-MZ_Plugins
 
@@ -70,13 +70,34 @@
 
 Технічні подробиці:
 Цей плагін створює полоси/шкали на основі тих, що використовуються 
-для героїв/героїнь.
+для герої_нь.
 
 Ви можете:
  - використовувати цей плагін у будь-яких проектах;
  - редагувати/покращувати цей плагін;
  - розповсюджувати цей плагін, відредактованим або невідредактованим.
 Вказувати авторство не обов'язково. 
+
+Цей плагін розповсюджується за ліцензією MIT-0 (MIT No Attribution License)
+
+MIT No Attribution
+
+Copyright 2023 WhitePaperChan
+
+Permission is hereby granted, free of charge, to any person obtaining a copy 
+of this software and associated documentation files (the "Software"), to deal 
+in the Software without restriction, including without limitation the rights 
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell 
+copies of the Software, and to permit persons to whom the Software is 
+furnished to do so.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR 
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, 
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE 
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER 
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, 
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE 
+SOFTWARE. 
 */
 
 //Plugin parameters
