@@ -1,6 +1,6 @@
 /*:
 @target MZ
-@plugindesc Змінює зовнішній вигляд стандартних полос RPG Maker MZ (HP, MP, TP, дії та інших на основі Sprite_Gauge)
+@plugindesc (версія 1.1) Змінює зовнішній вигляд стандартних полос RPG Maker MZ (HP, MP, TP, дії та інших на основі Sprite_Gauge)
 @author WhitePaper
 @url https://github.com/WhitePaperChan/RPG_Maker_MV-MZ_Plugins
 
@@ -28,8 +28,24 @@
 @desc
 Висота місця під текст у пікселях. (НЕ ВПЛИВАЄ НА РОЗМІР ШРИФТА!)
 
+@param TextLabelSize
+@text Розмір тексту назви полоси
+@type number
+@default 0
+@min 0
+@desc
+Розмір шрифта значення (якщо 0 - стандартне значення)
+
+@param TextValueSize
+@text Розмір тексту значення
+@type number
+@default 0
+@min 0
+@desc
+Розмір шрифта значення (якщо 0 - стандартне значення)
+
 @param IsMaxShown
-@text Показувати максимальне значення?
+@text Показувати макс. значення?
 @type boolean
 @default false
 @desc
@@ -70,7 +86,9 @@ WP_SimpleGaugeCustomization_params = PluginManager.parameters('WhitePaper_Simple
 WP_SimpleGaugeCustomization_gaugeHeight = eval(WP_SimpleGaugeCustomization_params['GaugeHeight']);
 WP_SimpleGaugeCustomization_gaugeWidth = eval(WP_SimpleGaugeCustomization_params['GaugeWidth']);
 WP_SimpleGaugeCustomization_textHeight = eval(WP_SimpleGaugeCustomization_params['TextHeight']);
-WP_SimpleGaugeCustomization_isMaxShown = eval(WP_SimpleGaugeCustomization_params['IsMaxShown']);
+WP_SimpleGaugeCustomization_textLabelSize = eval(WP_SimpleGaugeCustomization_params['TextLabelSize']) || 0;
+WP_SimpleGaugeCustomization_textValueSize = eval(WP_SimpleGaugeCustomization_params['TextValueSize']) || 0;
+WP_SimpleGaugeCustomization_isMaxShown = eval(WP_SimpleGaugeCustomization_params['IsMaxShown']) || false;
 
 Window_StatusBase.prototype.gaugeLineHeight = function() {
     return Math.max(WP_SimpleGaugeCustomization_gaugeHeight, WP_SimpleGaugeCustomization_textHeight);
@@ -115,3 +133,21 @@ Sprite_Gauge.prototype.drawValue = function() {
 Sprite_Gauge.prototype.drawValueText = function(){
     return this.currentValue() + "/" + this.currentMaxValue();
 }
+
+WP_SimpleGaugeCustomization_Sprite_Gauge_prototype_valueFontSize = Sprite_Gauge.prototype.valueFontSize;
+Sprite_Gauge.prototype.valueFontSize = function() {
+    if (WP_SimpleGaugeCustomization_textValueSize != 0){
+        return WP_SimpleGaugeCustomization_textValueSize;
+    } else {
+        return WP_SimpleGaugeCustomization_Sprite_Gauge_prototype_valueFontSize.call(this);
+    }
+};
+
+WP_SimpleGaugeCustomization_Sprite_Gauge_prototype_labelFontSize = Sprite_Gauge.prototype.labelFontSize;
+Sprite_Gauge.prototype.labelFontSize = function() {
+    if (WP_SimpleGaugeCustomization_textLabelSize != 0){
+        return WP_SimpleGaugeCustomization_textLabelSize;
+    } else {
+        return WP_SimpleGaugeCustomization_Sprite_Gauge_prototype_labelFontSize.call(this);
+    }
+};
