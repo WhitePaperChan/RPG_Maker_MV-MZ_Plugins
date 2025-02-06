@@ -20,6 +20,13 @@
 @desc
 Ширина полоси у пікселях (включає місце під текст).
 
+@param IsGaugeAfterLabel
+@text Полоса після тексту?
+@type boolean
+@default true
+@desc
+Чи буде полоса починатися після назви.
+
 @param TextHeight
 @text Висота місця під текст
 @type number
@@ -27,6 +34,14 @@
 @min 3
 @desc
 Висота місця під текст у пікселях. (НЕ ВПЛИВАЄ НА РОЗМІР ШРИФТА!)
+
+@param TextLabelY
+@text Y тексту назви полоси
+@type number
+@default 0
+@min 0
+@desc
+Y-координата тексту назви полоси
 
 @param TextLabelSize
 @text Розмір тексту назви полоси
@@ -85,7 +100,9 @@ SOFTWARE.
 WP_SimpleGaugeCustomization_params = PluginManager.parameters('WhitePaper_SimpleGaugeCustomizationMZ');
 WP_SimpleGaugeCustomization_gaugeHeight = eval(WP_SimpleGaugeCustomization_params['GaugeHeight']);
 WP_SimpleGaugeCustomization_gaugeWidth = eval(WP_SimpleGaugeCustomization_params['GaugeWidth']);
+WP_SimpleGaugeCustomization_isGaugeAfterLabel = eval(WP_SimpleGaugeCustomization_params['IsGaugeAfterLabel']);
 WP_SimpleGaugeCustomization_textHeight = eval(WP_SimpleGaugeCustomization_params['TextHeight']);
+WP_SimpleGaugeCustomization_textLabelY = eval(WP_SimpleGaugeCustomization_params['TextLabelY']) || 0;
 WP_SimpleGaugeCustomization_textLabelSize = eval(WP_SimpleGaugeCustomization_params['TextLabelSize']) || 0;
 WP_SimpleGaugeCustomization_textValueSize = eval(WP_SimpleGaugeCustomization_params['TextValueSize']) || 0;
 WP_SimpleGaugeCustomization_isMaxShown = eval(WP_SimpleGaugeCustomization_params['IsMaxShown']) || false;
@@ -116,6 +133,20 @@ Sprite_Gauge.prototype.drawGauge = function() {
     const gaugewidth = this.bitmapWidth() - gaugeX;
     const gaugeHeight = this.gaugeHeight();
     this.drawGaugeRect(gaugeX, gaugeY, gaugewidth, gaugeHeight);
+};
+
+WP_SimpleGaugeCustomization_Sprite_Gauge_prototype_gaugeX = Sprite_Gauge.prototype.gaugeX;
+Sprite_Gauge.prototype.gaugeX = function() {
+    if (!WP_SimpleGaugeCustomization_isGaugeAfterLabel){
+        return 0
+    } else {
+        return WP_SimpleGaugeCustomization_Sprite_Gauge_prototype_gaugeX.call(this)
+    }
+};
+
+
+Sprite_Gauge.prototype.labelY = function() {
+    return WP_SimpleGaugeCustomization_textLabelY;
 };
 
 WP_SimpleGaugeCustomization_Sprite_Gauge_prototype_drawValue = Sprite_Gauge.prototype.drawValue;
