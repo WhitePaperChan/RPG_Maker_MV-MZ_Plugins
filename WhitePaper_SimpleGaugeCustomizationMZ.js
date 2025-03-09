@@ -1,6 +1,6 @@
 /*:
 @target MZ
-@plugindesc (версія 1.1) Змінює зовнішній вигляд стандартних полос RPG Maker MZ (HP, MP, TP, дії та інших на основі Sprite_Gauge)
+@plugindesc (версія 1.2) Змінює зовнішній вигляд стандартних полос RPG Maker MZ (HP, MP, TP, дії та інших на основі Sprite_Gauge)
 @author WhitePaper
 @url https://github.com/WhitePaperChan/RPG_Maker_MV-MZ_Plugins
 
@@ -66,6 +66,19 @@ Y-координата тексту назви полоси
 @desc
 Чи буде показано максимум HP/MP/TP.
 
+@param UseNumberFormat
+@text Використовувати форматування числа?
+@type boolean
+@default false
+@desc
+Чи використовувати форматування числа, відповідне заданій локалі.
+
+@param NumberFormatLocale
+@text Локаль форматування числа
+@default uk-UA
+@desc
+Локаль для форматування числа (приклад: при uk-UA 1000000 показано як 1 000 000).
+
 @param 
 @help
 
@@ -106,6 +119,9 @@ WP_SimpleGaugeCustomization_textLabelY = eval(WP_SimpleGaugeCustomization_params
 WP_SimpleGaugeCustomization_textLabelSize = eval(WP_SimpleGaugeCustomization_params['TextLabelSize']) || 0;
 WP_SimpleGaugeCustomization_textValueSize = eval(WP_SimpleGaugeCustomization_params['TextValueSize']) || 0;
 WP_SimpleGaugeCustomization_isMaxShown = eval(WP_SimpleGaugeCustomization_params['IsMaxShown']) || false;
+WP_SimpleGaugeCustomization_useNumberFormat = eval(WP_SimpleGaugeCustomization_params['UseNumberFormat']) || false;
+WP_SimpleGaugeCustomization_numberFormatLocale = WP_SimpleGaugeCustomization_params['NumberFormatLocale'] || 'uk-UA';
+
 
 Window_StatusBase.prototype.gaugeLineHeight = function() {
     return Math.max(WP_SimpleGaugeCustomization_gaugeHeight, WP_SimpleGaugeCustomization_textHeight);
@@ -151,18 +167,31 @@ Sprite_Gauge.prototype.labelY = function() {
 
 WP_SimpleGaugeCustomization_Sprite_Gauge_prototype_drawValue = Sprite_Gauge.prototype.drawValue;
 Sprite_Gauge.prototype.drawValue = function() {
+    const width = this.bitmapWidth();
+    const height = this.textHeight();
+    this.setupValueFont();
     if (WP_SimpleGaugeCustomization_isMaxShown){
-        const width = this.bitmapWidth();
-        const height = this.textHeight();
-        this.setupValueFont();
-        this.bitmap.drawText(this.drawValueText(), 0, 0, width, height, "right");
+        this.bitmap.drawText(this.drawValueWithMaxText(), 0, 0, width, height, "right");
     } else {
-        WP_SimpleGaugeCustomization_Sprite_Gauge_prototype_drawValue.call(this);
+        this.bitmap.drawText(this.drawValueText(), 0, 0, width, height, "right");
     }
 };
 
+Sprite_Gauge.prototype.drawValueWithMaxText = function(){
+    if (WP_SimpleGaugeCustomization_useNumberFormat){
+        return new Intl.NumberFormat(WP_SimpleGaugeCustomization_numberFormatLocale).format(this.currentValue()) + "/" + 
+            new Intl.NumberFormat(WP_SimpleGaugeCustomization_numberFormatLocale).format(this.currentMaxValue());
+    } else {
+        return this.currentValue() + "/" + this.currentMaxValue()
+    }
+}
+
 Sprite_Gauge.prototype.drawValueText = function(){
-    return this.currentValue() + "/" + this.currentMaxValue();
+    if (WP_SimpleGaugeCustomization_useNumberFormat){
+        return new Intl.NumberFormat(WP_SimpleGaugeCustomization_numberFormatLocale).format(this.currentValue());
+    } else {
+        return this.currentValue()
+    }
 }
 
 WP_SimpleGaugeCustomization_Sprite_Gauge_prototype_valueFontSize = Sprite_Gauge.prototype.valueFontSize;
