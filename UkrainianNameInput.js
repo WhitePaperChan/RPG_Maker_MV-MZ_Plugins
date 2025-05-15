@@ -25,11 +25,26 @@
  * Usage with WhitePaper_AllNameInputs.js:
  * Add UKRAINE in the parameter "Keyboards"  
  *
- * You can:
- *  - use this plugin in any projects; 
- *  - edit/modify this plugin;
- *  - redistribute this plugin, edited or unedited.
- * Credit isn't necessarily.
+ * This plugin is distributed with MIT-0 license (MIT No Attribution License)
+ * 
+ * MIT No Attribution
+ * 
+ * Copyright 2025 WhitePaperChan
+ * 
+ * Permission is hereby granted, free of charge, to any person obtaining a copy 
+ * of this software and associated documentation files (the "Software"), to deal 
+ * in the Software without restriction, including without limitation the rights 
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell 
+ * copies of the Software, and to permit persons to whom the Software is 
+ * furnished to do so.
+ * 
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR 
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, 
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE 
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER 
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, 
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE 
+ * SOFTWARE. 
  */
 
  /*:ru
@@ -53,11 +68,26 @@
  * Использование с WhitePaper_AllNameInputs.js:
  * В параметре "Клавиатуры" добавить UKRAINE. 
  *
- * Вы можете:
- *  - использовать этот плагин в любых проектах; 
- *  - редактировать/улучшать этот плагин;
- *  - распространять этот плагин, отредактированным или неотредактированным.
- * Указывать авторство не обязательно.
+ * Этот плагин распространяется за лицензией MIT-0 (MIT No Attribution License)
+ * 
+ * MIT No Attribution
+ * 
+ * Copyright 2025 WhitePaperChan
+ * 
+ * Permission is hereby granted, free of charge, to any person obtaining a copy 
+ * of this software and associated documentation files (the "Software"), to deal 
+ * in the Software without restriction, including without limitation the rights 
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell 
+ * copies of the Software, and to permit persons to whom the Software is 
+ * furnished to do so.
+ * 
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR 
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, 
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE 
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER 
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, 
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE 
+ * SOFTWARE. 
  */
  
  /*:uk
@@ -81,11 +111,26 @@
  * Використання з WhitePaper_AllNameInputs.js:
  * У параметрі "Клавіатури" додати UKRAINE. 
  *
- * Ви можете:
- *  - використовувати цей плагін у будь-яких проектах; 
- *  - редагувати/покращувати цей плагін;
- *  - розповсюджувати цей плагін, відредактованим або невідредактованим.
- * Вказувати авторство не обов'язково.
+ * Цей плагін розповсюджується за ліцензією MIT-0 (MIT No Attribution License)
+ * 
+ * MIT No Attribution
+ * 
+ * Copyright 2025 WhitePaperChan
+ * 
+ * Permission is hereby granted, free of charge, to any person obtaining a copy 
+ * of this software and associated documentation files (the "Software"), to deal 
+ * in the Software without restriction, including without limitation the rights 
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell 
+ * copies of the Software, and to permit persons to whom the Software is 
+ * furnished to do so.
+ * 
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR 
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, 
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE 
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER 
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, 
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE 
+ * SOFTWARE. 
  */
 //=============================================================================
 
