@@ -14,10 +14,26 @@
  * Other info:
  * If at least one of the skill types is sealed/blocked, skill is also sealed/blocked.
  * 
- * You can:
- *  - use this plugin in any projects; 
- *  - edit/modify this plugin.
- * Credit is desirable, but isn't necessarily.
+ * This plugin is distributed with MIT-0 license (MIT No Attribution License)
+ * 
+ * MIT No Attribution
+ * 
+ * Copyright 2025 WhitePaperChan
+ * 
+ * Permission is hereby granted, free of charge, to any person obtaining a copy 
+ * of this software and associated documentation files (the "Software"), to deal 
+ * in the Software without restriction, including without limitation the rights 
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell 
+ * copies of the Software, and to permit persons to whom the Software is 
+ * furnished to do so.
+ * 
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR 
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, 
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE 
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER 
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, 
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE 
+ * SOFTWARE. 
  */
 /*:ru
  * @target MV, MZ
@@ -31,10 +47,26 @@
  * Другая информация:
  * Если хотя бы один из типов навыка заблокирован, навык тоже будет заблокирован.
  * 
- * Вы можете:
- *  - использовать этот плагин в любых проектах; 
- *  - редактировать/улучшать этот плагин.
- * Указывать авторство желательно, но не обязательно.
+ * Этот плагин распространяется за лицензией MIT-0 (MIT No Attribution License)
+ * 
+ * MIT No Attribution
+ * 
+ * Copyright 2025 WhitePaperChan
+ * 
+ * Permission is hereby granted, free of charge, to any person obtaining a copy 
+ * of this software and associated documentation files (the "Software"), to deal 
+ * in the Software without restriction, including without limitation the rights 
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell 
+ * copies of the Software, and to permit persons to whom the Software is 
+ * furnished to do so.
+ * 
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR 
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, 
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE 
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER 
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, 
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE 
+ * SOFTWARE. 
 */
 /*:uk
  * @target MV, MZ
@@ -48,10 +80,26 @@
  * Інша інформація:
  * Якщо хоча б один з типів навички заблокований, навичка теж буде заблокована.
  *
- * Ви можете:
- *  - використовувати цей плагін у будь-яких проектах; 
- *  - редагувати/покращувати цей плагін.
- * Вказувати авторство бажано, але не обов'язково.
+ * Цей плагін розповсюджується за ліцензією MIT-0 (MIT No Attribution License)
+ * 
+ * MIT No Attribution
+ * 
+ * Copyright 2025 WhitePaperChan
+ * 
+ * Permission is hereby granted, free of charge, to any person obtaining a copy 
+ * of this software and associated documentation files (the "Software"), to deal 
+ * in the Software without restriction, including without limitation the rights 
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell 
+ * copies of the Software, and to permit persons to whom the Software is 
+ * furnished to do so.
+ * 
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR 
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, 
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE 
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER 
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, 
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE 
+ * SOFTWARE. 
 */
 
 WP_Stypes_Game_BattlerBase_meetsSkillConditions = Game_BattlerBase.prototype.meetsSkillConditions 
